@@ -1,0 +1,21 @@
+{
+  "name": "crab-desk",
+  "owner": { "name": "teuss96", "url": "https://github.com/teuss96" },
+  "metadata": { "description": "Pixel programmer crabs for Claude Code: a desk above the effortless band and coding subagents in the savvy-progress panel." },
+  "plugins": [
+    {
+      "name": "dev-desk",
+      "source": "./plugins/dev-desk",
+      "description": "Mod: pixel crab with a desk above the effortless band; walks while idle, types while Claude works. Hides ponytail's band row.",
+      "version": "0.1.0",
+      "category": "mod"
+    },
+    {
+      "name": "savvy-progress",
+      "source": "./plugins/savvy-progress",
+      "description": "Mod (modified savvy-progress by johnnyvizz): agents panel where subagents code at a laptop while running and turn back into the plain crab when done.",
+      "version": "1.2.1-crab.1",
+      "category": "mod"
+    }
+  ]
+}

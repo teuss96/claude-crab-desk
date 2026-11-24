@@ -1,0 +1,12 @@
+{
+  "name": "dev-desk",
+  "version": "0.1.0",
+  "description": "Pixel crab with a desk above the effortless band: walks while idle, types at the laptop while Claude works. Hides ponytail's band row.",
+  "author": {
+    "name": "teuss96",
+    "url": "https://github.com/teuss96"
+  },
+  "homepage": "https://github.com/teuss96/claude-crab-desk/tree/main/plugins/dev-desk",
+  "repository": "https://github.com/teuss96/claude-crab-desk",
+  "license": "MIT"
+}
