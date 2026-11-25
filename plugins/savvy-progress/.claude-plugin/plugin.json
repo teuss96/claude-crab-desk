@@ -1,7 +1,7 @@
 {
   "name": "savvy-progress",
-  "version": "1.2.1-crab.1",
-  "description": "Modified savvy-progress: progress bar and agents panel, with running and planned subagents drawn as pixel programmer crabs at a laptop; finished ones as the plain crab.",
+  "version": "1.2.1-crab.2",
+  "description": "Modified savvy-progress: progress bar and agents panel, with running and planned subagents drawn as pixel programmer crabs at a laptop; finished ones in a white dress shirt and black tie.",
   "author": {
     "name": "johnnyvizz",
     "url": "https://github.com/johnnyvizz"

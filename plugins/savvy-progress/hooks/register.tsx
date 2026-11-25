@@ -613,6 +613,13 @@ const COSTUMES: Record<string, (f: Fill, t: string) => void> = {
     f(27, 6, 1, 9, '#C9CCD2', 'it'); f(26, 15, 3, 1, '#7A4A26', 'it')
   },
   other: f => crabBody(f),
+  // Exec: a finished agent in a white dress shirt and black tie.
+  exec: f => {
+    crabBody(f)
+    f(10, 15, 10, 7, '#F8F6F1'); f(10, 15, 1, 2, '#D2D1C8'); f(19, 15, 1, 2, '#D2D1C8')
+    f(13, 15, 4, 1, '#F8F6F1'); f(12, 15, 2, 1, '#E2E1DA'); f(16, 15, 2, 1, '#E2E1DA')
+    f(14, 16, 2, 1, INK); f(14, 17, 2, 3, '#2A2928'); f(15, 20, 1, 1, '#2A2928')
+  },
   // Dev: programmer behind a laptop, headphones in the tier's color; sits still,
   // the claws type, the eyes read, the lid's logo blinks and the coffee steams.
   dev: (f, t) => {
@@ -729,7 +736,7 @@ const agentSvg = (W: number, a: AgentRun, at: number): string => {
   return svg(
     W,
     66,
-    `${rowCrab(W, 0, 14, costumeOf(a.type), false, a.status === 'running', a.status === 'running' ? 'dev' : 'other')}
+    `${rowCrab(W, 0, 14, costumeOf(a.type), false, a.status === 'running', a.status === 'running' ? 'dev' : 'exec')}
 <text class="t" ${startText(W, 42, 18)} font-family="${FONT}" font-size="13" font-weight="600">${xml(fitText(a.description || a.type, 13, textW))}</text>
 <text ${startText(W, 42, 34)} font-family="${FONT}" font-size="11"><tspan fill="${color}">${xml(tier === 'other' ? a.type : tierWord(tier))}</tspan><tspan class="s">  ${xml(meta.join('  ·  '))}</tspan></text>
 ${steps && stepsW > 30 ? `<text class="t" ${startText(W, 42, 49)} font-family="${FONT}" font-size="11" font-variant-numeric="tabular-nums">${xml(fitText(steps, 11, stepsW))}</text>` : ''}
@@ -767,7 +774,7 @@ const compactSvg = (W: number, list: AgentRun[], planned: Planned[], t: ReturnTy
   const shown = icons.slice(0, fit)
   const more = icons.length - shown.length
   const body = shown
-    .map((ic, i) => rowCrab(W, i * 36, 0, ic.k, ic.dim, ic.s === 'running', ic.s === 'running' || ic.s === 'planned' ? 'dev' : 'other') + (ic.s === 'running' ? `<circle class="live" cx="${mx(W, i * 36 + 32)}" cy="4" r="3" fill="${ic.c}"/>` : ''))
+    .map((ic, i) => rowCrab(W, i * 36, 0, ic.k, ic.dim, ic.s === 'running', ic.s === 'running' || ic.s === 'planned' ? 'dev' : 'exec') + (ic.s === 'running' ? `<circle class="live" cx="${mx(W, i * 36 + 32)}" cy="4" r="3" fill="${ic.c}"/>` : ''))
     .join('')
   const x = shown.length * 36 + (more ? 4 : 0)
   return svg(

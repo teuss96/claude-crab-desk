@@ -3,7 +3,7 @@
 Pixel programmer crabs for the Claude Code desktop app.
 
 - **dev-desk**: the main crab gets a desk above the [effortless](https://github.com/HeyCubit/effortless) band. It walks along the band while Claude is idle and types at its laptop while Claude works.
-- **savvy-progress** (modified): the agents panel (`/agents-info`) shows each running subagent as a crab coding at a laptop, headphones in its tier's color; finished subagents turn back into the plain crab. A modified copy of [savvy-progress](https://github.com/johnnyvizz/claude-kit) by johnnyvizz, MIT.
+- **savvy-progress** (modified): the agents panel (`/agents-info`) shows each running subagent as a crab coding at a laptop, headphones in its tier's color; finished subagents put on a white dress shirt and black tie. A modified copy of [savvy-progress](https://github.com/johnnyvizz/claude-kit) by johnnyvizz, MIT.
 
 ## Install
 
