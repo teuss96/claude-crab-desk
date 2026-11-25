@@ -1,4 +1,4 @@
-> **Modified copy.** This is [savvy-progress](https://github.com/johnnyvizz/claude-kit/tree/main/plugins/savvy-progress) by johnnyvizz (MIT), changed in this repository: subagents in the agents panel wear a "programmer" costume (laptop, headphones in the tier's color, typing claws) while running or planned, and wear a black tie when finished. The original costumes stay in the code, unused. Everything else is upstream 1.2.1.
+> **Modified copy.** This is [savvy-progress](https://github.com/johnnyvizz/claude-kit/tree/main/plugins/savvy-progress) by johnnyvizz (MIT), changed in this repository: subagents in the agents panel wear a "programmer" costume (laptop, headphones in the tier's color, typing claws) while running or planned, and wear a white shirt and black tie when finished. The original costumes stay in the code, unused. Everything else is upstream 1.2.1.
 
 # savvy-progress
 

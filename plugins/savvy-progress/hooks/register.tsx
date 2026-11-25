@@ -613,10 +613,14 @@ const COSTUMES: Record<string, (f: Fill, t: string) => void> = {
     f(27, 6, 1, 9, '#C9CCD2', 'it'); f(26, 15, 3, 1, '#7A4A26', 'it')
   },
   other: f => crabBody(f),
-  // Exec: a finished agent in a black tie: the loop round the neck, the knot, a blade to a point.
+  // Exec: a finished agent in a white shirt (sleeves to the claws, pointed collar) and a black tie.
   exec: f => {
     crabBody(f)
-    stamp(f, 12, 13, ['o....o', 'oo..oo', '.offo.', '..oo..', '.offo.', '.offo.', 'offffo', '.offo.', '..oo..'], { o: '#0E0E0E', f: '#3A3A3C' })
+    const W = '#F2F0EC', G = '#D2D1C8'
+    f(7, 16, 16, 5, W); f(7, 20, 16, 1, G); f(7, 16, 1, 4, G); f(22, 16, 1, 4, G)
+    f(5, 14, 2, 4, W); f(5, 17, 2, 1, G); f(23, 14, 2, 4, W); f(23, 17, 2, 1, G)
+    f(11, 16, 3, 1, '#FFFFFF'); f(12, 17, 2, 1, G); f(16, 16, 3, 1, '#FFFFFF'); f(16, 17, 2, 1, G)
+    f(14, 16, 2, 1, INK); f(14, 17, 2, 4, '#111111'); f(14, 21, 2, 1, '#111111'); f(14, 22, 1, 1, '#111111')
   },
   // Dev: programmer behind a laptop, headphones in the tier's color; sits still,
   // the claws type, the eyes read, the lid's logo blinks and the coffee steams.
