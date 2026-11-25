@@ -103,6 +103,10 @@ export const register: Register = on => {
   // When the state last changed, and where the walker was when work began.
   let isWorking: boolean | undefined
   let changedAt = 0
+  // The drawing is made once per state and reused: a source that changed on every redraw
+  // (other rows redraw the band about once a second) restarted the animation each time.
+  let drawnKey = ''
+  let drawn = ''
   let from = SEAT
 
   // The scene is drawn by the list wrapper, flush on the rows: a row of its own would get the band's gap.
@@ -120,10 +124,15 @@ export const register: Register = on => {
       isWorking = e.props.isWorking
       changedAt = now
     }
+    const key = `${W}|${isWorking}|${changedAt}`
+    if (key !== drawnKey) {
+      drawnKey = key
+      drawn = sceneSvg(W, e.props.isWorking, now - changedAt, from)
+    }
     return (
       <Box flexDirection="column">
         <Svg
-          source={sceneSvg(W, e.props.isWorking, now - changedAt, from)}
+          source={drawn}
           alt={e.props.isWorking ? 'Crab typing at its desk' : 'Crab walking beside its desk'}
           width={W}
           height={H}

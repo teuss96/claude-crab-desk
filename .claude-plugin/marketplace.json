@@ -7,7 +7,7 @@
       "name": "dev-desk",
       "source": "./plugins/dev-desk",
       "description": "Mod: pixel crab with a desk above the effortless band; walks while idle, types while Claude works. Hides ponytail's band row.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "mod"
     },
     {
